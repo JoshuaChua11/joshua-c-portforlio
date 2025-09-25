@@ -26,6 +26,38 @@ export default function App() {
     },
   ];
 
+    const experience = [
+    {
+      role: "Software Engineer Intern",
+      company: "ABC Corp",
+      period: "June 2024 - August 2024",
+      description: [
+        "Developed a React-based dashboard for internal analytics.",
+        "Implemented REST APIs using Node.js and Express.",
+        "Optimized database queries, reducing load times by 30%.",
+      ],
+    },
+    {
+      role: "Frontend Developer",
+      company: "Freelance",
+      period: "January 2023 - Present",
+      description: [
+        "Designed and built responsive websites for small businesses.",
+        "Integrated third-party services like Stripe and Firebase.",
+        "Collaborated with clients to deliver tailored web solutions.",
+      ],
+    },
+    {
+      role: "Research Assistant",
+      company: "University Lab",
+      period: "2022 - 2023",
+      description: [
+        "Worked on signal processing algorithms for embedded systems.",
+        "Built visualization tools for lab data.",
+      ],
+    },
+  ];
+
   return (
     <div className="app">
       {/* Header */}
@@ -34,7 +66,7 @@ export default function App() {
           <div className="logo-circle">JJ</div>
           <div>
             <h1>Joshua Ji Hin Chua</h1>
-            <p>Engineer • Software • Games</p>
+            <p> Electrical Engineer • Computer Science • AI Engineer </p>
           </div>
         </div>
 
@@ -114,6 +146,25 @@ export default function App() {
                 <a href="#">Live</a>
                 <a href="#">Source</a>
               </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="section experience">
+        <h3>Experience</h3>
+        <div className="experience-scroll">
+          {experience.map((job, index) => (
+            <div key={index} className="experience-card">
+              <h4>{job.role}</h4>
+              <p className="company">{job.company}</p>
+              <p className="period">{job.period}</p>
+              <ul>
+                {job.description.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
