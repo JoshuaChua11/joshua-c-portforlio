@@ -26,7 +26,7 @@ export default function App() {
     },
   ];
 
-    const experience = [
+  const experience = [
     {
       role: "Software Engineer Intern",
       company: "ABC Corp",
@@ -58,6 +58,23 @@ export default function App() {
     },
   ];
 
+  const skills = [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Node.js",
+    "Python",
+    "C/C++",
+    "WebAudio",
+    "Canvas",
+    "D3.js",
+    "LSTM",
+    "SQL",
+    "Git",
+    "Figma",
+    "Unity",
+  ];
+
   return (
     <div className="app">
       {/* Header */}
@@ -73,7 +90,7 @@ export default function App() {
         <nav className="nav">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
-          <a href="#writing">Writing</a>
+          <a href="#writing">Experience</a>
           <a href="#contact">Contact</a>
         </nav>
 
@@ -151,6 +168,21 @@ export default function App() {
         </div>
       </section>
 
+      {/* Skills Scroller */}
+      <section className="section skills">
+        <h3>Languages & Tools</h3>
+        <div className="skills-scroller">
+          <div className="skills-track">
+            {skills.map((skill, index) => (
+              <div key={index} className="skill-card">{skill}</div>
+            ))}
+            {skills.map((skill, index) => (
+              <div key={index + skills.length} className="skill-card">{skill}</div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Experience Section */}
       <section id="experience" className="section experience">
         <h3>Experience</h3>
@@ -167,21 +199,6 @@ export default function App() {
               </ul>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Writing Section */}
-      <section id="writing" className="section writing">
-        <h3>Selected Writing</h3>
-        <div className="writing-list">
-          <div className="writing-item">
-            <h4>Making deterministic procedural worlds</h4>
-            <p>Tradeoffs when building reproducible generators for levels and encounters.</p>
-          </div>
-          <div className="writing-item">
-            <h4>Latency tradeoffs: polling vs interrupts</h4>
-            <p>Experimental summary measuring polling and interrupt latencies on embedded boards.</p>
-          </div>
         </div>
       </section>
 
