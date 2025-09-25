@@ -90,11 +90,15 @@ export default function App() {
         <nav className="nav">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
-          <a href="#writing">Experience</a>
+          <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
         </nav>
 
-        <a href="#contact" className="cta-button">Get in Touch</a>
+        <div className="header-links">
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="icon-link">GitHub</a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="icon-link">LinkedIn</a>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="cta-button">Resume</a>
+       </div>
       </header>
 
       {/* Hero Section */}
@@ -102,16 +106,15 @@ export default function App() {
         <div className="hero-text">
           <p className="intro-text">Hello — I build things</p>
           <h2>
-            Software engineer & game systems designer — crafting tools and playful systems.
+            Electrical & software engineer — building innovative and creative technical solutions
           </h2>
           <p>
-            I focus on clear systems, reliable engineering, and delightful UX. 
-            I enjoy signal processing, procedural content, and building editor workflows 
-            that make complex tasks feel simple.
+            Undergraduate student at Monash University studying electrical engineering & computer 
+            science with a passion for designing & innovating impactful systems
           </p>
           <div className="hero-buttons">
             <a href="#projects" className="btn-outline">See Projects</a>
-            <a href="#writing" className="btn-dark">Read Writing</a>
+            <a href="#experience" className="btn-dark">See Experience</a>
           </div>
         </div>
 

@@ -330,3 +330,37 @@ a {
     transform: translateX(-50%);
   }
 }
+.header-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon-link {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #f1f5f9;
+  color: #1e293b;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-size: 14px;
+}
+
+.icon-link:hover {
+  background: #e2e8f0;
+  transform: translateY(-2px);
+}
+
+.cta-button {
+  background: #6366f1;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: opacity 0.3s ease;
+}
+
+.cta-button:hover {
+  opacity: 0.9;
+}
