@@ -6,74 +6,66 @@ export default function App() {
   const projects = [
     {
       id: 1,
-      title: "SignalFlow — DSP Visualizer",
+      title: "AI Trained Sentimental Analysis Trading Tool",
       description:
-        "Interactive visualizer for filters and signals with real-time parameter controls.",
-      tags: ["React", "WebAudio", "Canvas"],
+        "Automated trading bot leveraging Reddit sentiment analysis to make trades on NASDAQ at 10-hour intervals using a custom PyTorch model.",
+      tags: ["Python", "PyTorch", "IBKR TradeWorkshop"],
     },
     {
       id: 2,
-      title: "MazeMapper — Procedural Dungeon Tool",
+      title: "ClimbLog API Assistant",
       description:
-        "A fast editor + generator for grid-based dungeon layouts and path analytics.",
-      tags: ["TypeScript", "Algorithms", "SVG"],
+        "A universal logbook for climbers to track climbs from standardized boards with global sync, progression tracking, and personalized training recommendations.",
+      tags: ["Python", "SQL"],
     },
     {
       id: 3,
-      title: "MarketLens — Sentiment Dashboard",
+      title: "Audio Recorder Device",
       description:
-        "Aggregation and time-series sentiment visualization for community forums.",
-      tags: ["Python", "D3", "LSTM"],
+        "Custom-built embedded device with audio recording, playback, speed manipulation, and start/stop controls using STM32 hardware.",
+      tags: ["C++", "Python", "Quartus", "MatLab"],
     },
   ];
 
   const experience = [
     {
-      role: "Software Engineer Intern",
-      company: "ABC Corp",
-      period: "June 2024 - August 2024",
+      role: "Project Lead",
+      company: "Monash AIM",
+      period: "Feb 2025 – Sep 2025",
       description: [
-        "Developed a React-based dashboard for internal analytics.",
-        "Implemented REST APIs using Node.js and Express.",
-        "Optimized database queries, reducing load times by 30%.",
+        "Led a team of 8 in developing a novel data distillation pipeline for chest X-ray datasets (~120,000 images).",
+        "Leveraged BioViLT teacher models to generate synthetic datasets that were 95% smaller while retaining 90% of diagnostic accuracy.",
+        "Optimized lightweight CNN models to achieve a 6.2x reduction in training time and 80% lower computational cost.",
+        "Utilized PyTorch, HuggingFace Transformers, and distributed A100 GPU clusters for large-scale embedding extraction and training."
       ],
     },
     {
-      role: "Frontend Developer",
-      company: "Freelance",
-      period: "January 2023 - Present",
+      role: "Software Intern",
+      company: "MissionMed",
+      period: "July 2024 – Sep 2024",
       description: [
-        "Designed and built responsive websites for small businesses.",
-        "Integrated third-party services like Stripe and Firebase.",
-        "Collaborated with clients to deliver tailored web solutions.",
-      ],
-    },
-    {
-      role: "Research Assistant",
-      company: "University Lab",
-      period: "2022 - 2023",
-      description: [
-        "Worked on signal processing algorithms for embedded systems.",
-        "Built visualization tools for lab data.",
+        "Developed automated Discord and web scraper systems for real-time UCAT result monitoring, improving accuracy for applicant estimation.",
+        "Explored AI image generation for visual aid questions and fine-tuned prompts for interview question generation."
       ],
     },
   ];
 
   const skills = [
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Node.js",
+    "C++",
+    "C",
     "Python",
-    "C/C++",
-    "WebAudio",
-    "Canvas",
-    "D3.js",
-    "LSTM",
-    "SQL",
-    "Git",
-    "Figma",
-    "Unity",
+    "JavaScript",
+    "MatLab",
+    "PyTorch",
+    "HuggingFace Transformers",
+    "CUDA",
+    "TensorBoard",
+    "Google Cloud",
+    "AWS S3",
+    "Microsoft SQL Server",
+    "GitHub",
+    "Quartus",
+    "SolidWorks",
   ];
 
   // Animation variants
@@ -115,7 +107,7 @@ export default function App() {
           <div className="header-links">
             <motion.a
               whileHover={{ scale: 1.05 }}
-              href="https://github.com/yourusername"
+              href="https://github.com/JoshuaChua11"
               target="_blank"
               rel="noopener noreferrer"
               className="icon-link"
@@ -133,7 +125,7 @@ export default function App() {
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.05 }}
-              href="/resume.pdf"
+              href="/Joshua_Chua___Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="cta-button"
@@ -154,13 +146,11 @@ export default function App() {
           <div className="hero-text">
             <p className="intro-text">Hello — I build things</p>
             <h2>
-              Electrical & software engineer — building innovative and creative
-              technical solutions
+              Electrical & software engineer — building innovative and creative technical solutions
             </h2>
             <p>
-              Undergraduate student at Monash University studying electrical
-              engineering & computer science with a passion for designing &
-              innovating impactful systems.
+              Undergraduate student at Monash University studying electrical engineering & computer
+              science with a passion for designing & innovating impactful systems.
             </p>
             <div className="hero-buttons">
               <motion.a
@@ -188,8 +178,8 @@ export default function App() {
             transition={{ duration: 0.5 }}
           >
             <h3>Featured Project</h3>
-            <p>Multi Level Dataset Distillation - Medical Imaging</p>
-            <small>Built with PyTorch + TorchVision + HPC cluster</small>
+            <p>Chest X-Ray Dataset Distillation</p>
+            <small>Built with PyTorch, HuggingFace, and distributed GPU clusters</small>
           </motion.div>
         </motion.section>
 
@@ -204,31 +194,22 @@ export default function App() {
         >
           <h3>About Me</h3>
           <p>
-            I'm an engineer who likes thinking in systems: from finite-state
-            machines in hardware to emergent behavior in game ecosystems. I
-            prototype quickly and prefer readable, well-tested code.
+            I'm an engineer who likes thinking in systems: from finite-state machines in hardware
+            to emergent behavior in AI ecosystems. I prototype quickly and prefer readable,
+            well-tested code that scales across embedded systems, cloud computing, and AI workflows.
           </p>
           <div className="about-cards">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="card"
-            >
+            <motion.div whileHover={{ scale: 1.05 }} className="card">
               <span>Experience</span>
-              <strong>Embedded & Systems</strong>
+              <strong>AI & Embedded Systems</strong>
             </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="card"
-            >
+            <motion.div whileHover={{ scale: 1.05 }} className="card">
               <span>Education</span>
               <strong>ECE / Computer Systems</strong>
             </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="card"
-            >
+            <motion.div whileHover={{ scale: 1.05 }} className="card">
               <span>Currently</span>
-              <strong>Building game systems & tools</strong>
+              <strong>Developing ML pipelines & tools</strong>
             </motion.div>
           </div>
         </motion.section>
@@ -335,29 +316,28 @@ export default function App() {
             <span className="contact-icon">👤</span> Contact
           </h2>
           <p className="contact-text">
-            Always eager to grow and improve as a student, developer, and
-            collaborator. Feel free to reach out by email or connect with me on
-            LinkedIn!
+            Always eager to grow and improve as a student, developer, and collaborator.
+            Feel free to reach out by email or connect with me on LinkedIn!
           </p>
 
           <div className="contact-email">
             <span className="email-icon">✉️</span>
-            <a href="mailto:youremail@example.com" className="email-link">
-              youremail@example.com
+            <a href="mailto:1joshuachua@gmail.com" className="email-link">
+              1joshuachua@gmail.com
             </a>
           </div>
 
           <div className="contact-links">
             <motion.a
               whileHover={{ scale: 1.05 }}
-              href="mailto:youremail@example.com"
+              href="mailto:1joshuachua@gmail.com"
               className="contact-button"
             >
               Mail
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.05 }}
-              href="https://github.com/yourusername"
+              href="https://github.com/JoshuaChua11"
               className="contact-button"
               target="_blank"
               rel="noopener noreferrer"
