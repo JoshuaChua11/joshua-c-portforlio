@@ -120,8 +120,8 @@ export default function App() {
 
         <div className="hero-card">
           <h3>Featured Project</h3>
-          <p>SignalFlow — DSP Visualizer</p>
-          <small>Built with WebAudio + Canvas</small>
+          <p>Multi Level Dataset Distallation - Medical Imaging </p>
+          <small>Built with PyTorch + TorchVision + HPC cluster</small>
         </div>
       </section>
 
@@ -206,20 +206,54 @@ export default function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="section contact">
-        <h3>Contact</h3>
-        <p>Open to collaborations or discussions about systems, games, and DSP.</p>
-        <form className="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Message" required></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </section>
+      <div className="contact-section">
+        <h2 className="contact-title">
+          <span className="contact-icon">👤</span> Contact
+        </h2>
+        <p className="contact-text">
+          Always eager to grow and improve as a student, developer, and collaborator.
+          Feel free to reach out by email or connect with me on LinkedIn!
+        </p>
+
+        <div className="contact-email">
+          <span className="email-icon">✉️</span>
+          <a href="mailto:youremail@example.com" className="email-link">
+            youremail@example.com
+          </a>
+        </div>
+
+        <div className="contact-links">
+          <a
+            href="mailto:youremail@example.com"
+            className="contact-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Mail
+          </a>
+          <a
+            href="https://github.com/yourusername"
+            className="contact-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/yourusername"
+            className="contact-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
 
       {/* Footer */}
       <footer className="footer">
-        <p>Built with ❤️ — Designed to be clean and original.</p>
+        <p>Built by Joshua Chua </p>
       </footer>
     </div>
   );
