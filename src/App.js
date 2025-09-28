@@ -201,15 +201,15 @@ export default function App() {
           <div className="about-cards">
             <motion.div whileHover={{ scale: 1.05 }} className="card">
               <span>Experience</span>
-              <strong>AI & Embedded Systems</strong>
+              <strong>Fullstack Development / AI & ML Training / Embedded Systems</strong>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} className="card">
               <span>Education</span>
-              <strong>ECE / Computer Systems</strong>
+              <strong>Electrical Engineering / Advanced Computer Science</strong>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} className="card">
               <span>Currently</span>
-              <strong>Developing ML pipelines & tools</strong>
+              <strong>Integrating data distllation project for Monash AIM</strong>
             </motion.div>
           </div>
         </motion.section>
