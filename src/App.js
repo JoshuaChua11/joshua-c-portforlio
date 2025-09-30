@@ -167,7 +167,7 @@ export default function App() {
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.05 }}
-              href="/Joshua_Chua___Resume.pdf"
+              href="https://JoshuaChua11.github.io/joshua-c-portforlio/Joshua_Chua___Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="resume-button"
