@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/joshua-c-portforlio/static/css/main.bbe66cd4.css",
-    "main.js": "/joshua-c-portforlio/static/js/main.3938ba4a.js",
+    "main.css": "/joshua-c-portforlio/static/css/main.c15e39e7.css",
+    "main.js": "/joshua-c-portforlio/static/js/main.1d8ab2f8.js",
     "static/js/453.367a5f29.chunk.js": "/joshua-c-portforlio/static/js/453.367a5f29.chunk.js",
     "index.html": "/joshua-c-portforlio/index.html",
-    "main.bbe66cd4.css.map": "/joshua-c-portforlio/static/css/main.bbe66cd4.css.map",
-    "main.3938ba4a.js.map": "/joshua-c-portforlio/static/js/main.3938ba4a.js.map",
+    "main.c15e39e7.css.map": "/joshua-c-portforlio/static/css/main.c15e39e7.css.map",
+    "main.1d8ab2f8.js.map": "/joshua-c-portforlio/static/js/main.1d8ab2f8.js.map",
     "453.367a5f29.chunk.js.map": "/joshua-c-portforlio/static/js/453.367a5f29.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bbe66cd4.css",
-    "static/js/main.3938ba4a.js"
+    "static/css/main.c15e39e7.css",
+    "static/js/main.1d8ab2f8.js"
   ]
 }
