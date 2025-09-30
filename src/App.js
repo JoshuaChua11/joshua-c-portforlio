@@ -27,12 +27,11 @@ export default function App() {
       brief: "Universal logbook for climbers to track climbs with progression tracking.",
       details: [
         "A universal logbook for climbers to track climbs from standardized boards with global sync, progression tracking, and personalized training recommendations",
-        "Designed normalized SQL schema for efficient climb data storage and retrieval",
         "Implemented progression analytics with percentile rankings and grade predictions",
         "Created recommendation engine suggesting climbs based on user history and weaknesses",
         "Integrated with MoonBoard, Kilter Board, and Tension Board APIs"
       ],
-      tags: ["Python", "Flask", "SQL"],
+      tags: ["Python", "Flask"],
       image: null
     },
     {
@@ -60,8 +59,7 @@ export default function App() {
         "Led a team of 8 in developing a novel data distillation pipeline for chest X-ray datasets (~120,000 images)",
         "Leveraged BioViLT teacher models to generate synthetic datasets that were 95% smaller while retaining 90% of diagnostic accuracy",
         "Optimized lightweight CNN models to achieve a 6.2x reduction in training time and 80% lower computational cost",
-        "Utilized PyTorch, HuggingFace Transformers, and distributed A100 GPU clusters for large-scale embedding extraction and training",
-        "Published findings showing maintained performance on 5 pathology classes with 6,000 distilled images vs 120,000 original",
+        "Utilized PyTorch, HuggingFace Transformers, and distributed A100 GPU clusters for large-scale embedding extraction and training",,
         "Implemented mixed-precision training and gradient checkpointing for memory efficiency"
       ],
       tags: ["Python", "PyTorch", "HuggingFace", "Medical AI", "Computer Vision", "Dataset Distillation"],
@@ -167,7 +165,7 @@ export default function App() {
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.05 }}
-              href="https://JoshuaChua11.github.io/joshua-c-portforlio/Joshua_Chua___Resume.pdf"
+              href={`${process.env.PUBLIC_URL}/Joshua_Chua___Resume.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className="resume-button"
@@ -251,7 +249,7 @@ export default function App() {
           
           <div className="about-content">
             <p className="about-text">
-              Hi 👋! I'm <strong className="highlight">Joshua Chua</strong>, an undergraduate studying Electrical Engineering and 
+              Hi!👋 I'm <strong className="highlight">Joshua Chua</strong>, an undergraduate studying Electrical Engineering and 
               Advanced Computer Science at Monash University. I'm passionate about building 
               innovative and impactful technical systems — whether it's optimizing AI models, 
               designing embedded hardware, or crafting scalable full-stack applications.
@@ -259,21 +257,22 @@ export default function App() {
 
             <p className="about-text">
               I thrive in collaborative environments where ideas can be shared and challenged. 
-              From leading a data distillation research project to improving workflows in 
+              From leading research projects to improving workflows in 
               engineering clubs, I enjoy tackling problems that merge creativity with technical depth.
             </p>
 
             <p className="about-text">
               My current interests lie at the intersection of <strong className="highlight">AI, robotics, and embedded systems</strong>, 
               where I aim to design intelligent solutions that enhance human capabilities and 
-              simplify complex processes.
+              simplify complex processes, in real-world scenarios.
             </p>
 
             <h4 className="subsection-title">Beyond Engineering</h4>
             <p className="about-text">
               Outside of engineering, I'm passionate about rock climbing 🧗 — it keeps me active, 
-              focused, and constantly pushing my limits. I also enjoy solving puzzles, from classic 
-              Rubik's cubes to more complex 5x5 challenges.
+              focused, and constantly pushing my limits. I also enjoy creating music and playing guitar 
+              which has been a relaxing and creative activity away from technical roles.
+              
             </p>
           </div>
 
@@ -288,7 +287,7 @@ export default function App() {
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} className="stat-card">
               <div className="stat-label">Current</div>
-              <div className="stat-value">Leading Monash AIM Research</div>
+              <div className="stat-value">On exchange in Korea</div>
             </motion.div>
           </div>
         </motion.section>
@@ -349,6 +348,56 @@ export default function App() {
             ))}
           </div>
         </motion.section>
+
+        {/* Modal for Project Details */}
+        <AnimatePresence>
+          {selectedProject && (
+            <motion.div
+              className="modal-backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedProject(null)}
+            >
+              <motion.div
+                className="modal-content"
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <h2>{selectedProject.title}</h2>
+                {selectedProject.image && (
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    className="modal-image"
+                  />
+                )}
+                <p>{selectedProject.description}</p>
+                <ul className="modal-details">
+                  {selectedProject.details.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+                <div className="tags">
+                  {selectedProject.tags.map((tag, i) => (
+                    <span key={i} className="tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <button
+                  className="close-button"
+                  onClick={() => setSelectedProject(null)}
+                >
+                  Close
+                </button>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Experience Section */}
         <motion.section
@@ -412,7 +461,7 @@ export default function App() {
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.05 }}
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/joshua-chua-aa2531320/"
               className="contact-button"
               target="_blank"
               rel="noopener noreferrer"
